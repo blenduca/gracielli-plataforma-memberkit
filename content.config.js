@@ -59,7 +59,22 @@
           lessons: [
             lesson("lideranca-autogestao-inteligencia-emocional", "3.1 Liderança Autogestão – Inteligência emocional", "03", "01"),
             lesson("autorregulacao", "3.2 Autorregulação", "03", "02"),
-            lesson("meu-plano-de-autogestao", "3.4 Meu plano de Autogestão", "03", "03"),
+            lesson("resiliencia-pressao-e-recuperacao", "3.3 Resiliência: pressão e recuperação", "03", "03"),
+            lesson("meu-plano-de-autogestao", "3.4 Meu plano de Autogestão", "03", "04"),
+          ],
+        },
+        {
+          id: "comunicacao-assertiva",
+          title: "Módulo 4 · Comunicação Assertiva",
+          description: "Comunique com responsabilidade, escute de verdade e seja claro sem ser agressivo.",
+          cover: prefix + "modulo-04.png",
+          lessons: [
+            lesson("comunicacao-responsabilidade-do-lider-parte-1", "4.1 Comunicação é responsabilidade do líder — vídeo 1", "04", "01"),
+            lesson("comunicacao-responsabilidade-do-lider-parte-2", "4.1 Comunicação é responsabilidade do líder — vídeo 2", "04", "02"),
+            lesson("escuta-ativa", "4.2 Escuta ativa", "04", "03"),
+            lesson("assertividade-clareza-sem-agressividade", "4.3 Assertividade: clareza sem agressividade", "04", "04"),
+            lesson("comunicacao-nao-violenta-parte-1", "4.4 Comunicação não violenta — vídeo 1", "04", "05"),
+            lesson("comunicacao-nao-violenta-parte-2", "4.4 Comunicação não violenta — vídeo 2", "04", "06"),
           ],
         },
       ],
