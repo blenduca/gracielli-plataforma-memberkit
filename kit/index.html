@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="classic">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Kit de artes</title>
+  <link rel="stylesheet" href="../src/css/tokens.css" />
+  <link rel="stylesheet" href="../src/css/components.css" />
+  <link rel="stylesheet" href="../src/css/arts.css" />
+  <style>
+    body { overflow: auto; background: hsl(var(--page)); }
+    .kit { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+    .kit-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1rem; padding-bottom: 1.5rem; border-bottom-width: 1px; }
+    .kit-head img { max-height: 40px; max-width: 180px; margin-bottom: .75rem; }
+    .kit-controls { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
+    .kit-controls label { display: inline-flex; align-items: center; gap: .5rem; font-weight: 500; }
+    .kit-note { margin-top: 1rem; padding: 1rem 1.25rem; font-size: .8125rem; line-height: 1.5; }
+    .kit-note strong { font-weight: 600; }
+    .kit-section { margin-top: 2.5rem; }
+    .kit-section > h2 { display: flex; align-items: baseline; gap: .75rem; }
+    .kit-section > h2 small { font-size: .8125rem; font-weight: 400; color: hsl(var(--muted-foreground)); }
+    .kit-grid { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1rem; }
+    .kit-card { display: flex; flex-direction: column; gap: .5rem; }
+    .kit-preview { position: relative; overflow: hidden; border-radius: var(--radius); box-shadow: 0 0 0 1px #0000001a, 0 4px 12px -2px #0000001a; background: #fff; }
+    .kit-meta { display: flex; align-items: center; justify-content: space-between; gap: .75rem; font-size: .75rem; color: hsl(var(--muted-foreground)); }
+    .kit-meta code { font-family: ui-monospace, Menlo, monospace; font-size: .6875rem; overflow-wrap: anywhere; }
+    .field-map { width: 100%; margin-top: 1rem; border-collapse: collapse; font-size: .8125rem; }
+    .field-map th, .field-map td { padding: .5rem .75rem; text-align: left; border-bottom: 1px solid hsl(var(--border)); }
+    .field-map th { font-weight: 600; color: hsl(var(--muted-foreground)); }
+    #stage { position: fixed; left: -100000px; top: 0; }
+  </style>
+</head>
+<body>
+  <!-- Kit de artes: capas, banners e certificado gerados na identidade do cliente
+       a partir de platform.config.js + content.config.js. Ver README → "Kit de artes". -->
+  <div id="kit" class="kit"></div>
+  <div id="stage" aria-hidden="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="../platform.config.js"></script>
+  <script src="../content.config.js"></script>
+  <script type="module" src="./kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+/* Conteúdo da mentoria de Graciélli Camini. IDs estáveis para preservar progresso. */
+(function () {
+  const prefix = "assets/courses/mapa-da-expansao-do-lider-";
+  const lesson = (id, title, moduleNo, lessonNo) => ({
+    id, title, duration: "",
+    thumbnail: prefix + "modulo-" + moduleNo + "-aula-" + lessonNo + ".png",
+    content: "<p>O vídeo e os materiais desta aula serão disponibilizados em breve.</p>",
+    attachments: [],
+  });
+  window.CONTENT_CONFIG = {
+    banners: [{
+      src: "assets/banners/banner-01.png",
+      alt: "O Mapa da Expansão do Líder — mentoria de liderança com Graciélli Camini",
+      title: "O Mapa da Expansão do Líder",
+      subtitle: "Uma jornada para liderar com clareza, consciência e resultado.",
+      cta: "Começar agora",
+      href: "#/curso/mapa-da-expansao-do-lider",
+    }],
+    categories: [{ id: "mentoria", title: "Mentoria" }],
+    courses: [{
+      slug: "mapa-da-expansao-do-lider",
+      title: "O Mapa da Expansão do Líder",
+      subtitle: "Liderança, autoconhecimento e autogestão",
+      description: "Desenvolva uma liderança mais segura, estratégica e emocionalmente preparada para conduzir pessoas com clareza, respeito e resultado.",
+      cover: prefix + "capa.png",
+      heroImage: prefix + "hero.png",
+      category: "mentoria",
+      modules: [
+        {
+          id: "fundamentos-da-lideranca",
+          title: "Módulo 1 · Fundamentos da Liderança",
+          description: "O papel do líder, sua visão e o impacto que gera nas pessoas.",
+          cover: prefix + "modulo-01.png",
+          lessons: [
+            lesson("lideranca-nao-comeca-no-cargo", "1.1 Liderança não começa no cargo", "01", "01"),
+            lesson("lider-chefe-e-gestor", "1.2 Líder, chefe e gestor", "01", "02"),
+            lesson("impacto-do-lider-parte-1", "1.3 O impacto do líder sobre o ambiente e as pessoas — vídeo 1", "01", "03"),
+            lesson("impacto-do-lider-parte-2", "1.3 O impacto do líder sobre o ambiente e as pessoas — vídeo 2", "01", "04"),
+            lesson("construa-sua-visao-de-lideranca", "1.4 Construa sua visão de liderança", "01", "05"),
+          ],
+        },
+        {
+          id: "autoconhecimento-e-perfil",
+          title: "Módulo 2 · Autoconhecimento e Perfil",
+          description: "Interprete seu perfil e reconheça suas forças e excessos.",
+          cover: prefix + "modulo-02.png",
+          lessons: [
+            lesson("autoconhecimento", "2.1 Autoconhecimento", "02", "01"),
+            lesson("interpretar-perfil-comportamental", "2.2 Como interpretar um perfil comportamental", "02", "02"),
+            lesson("forcas-e-excessos", "2.3 Suas forças e seus excessos", "02", "03"),
+            lesson("mapa-do-perfil-do-lider", "2.4 Mapa do Perfil do Líder", "02", "04"),
+          ],
+        },
+        {
+          id: "autogestao-e-inteligencia-emocional",
+          title: "Módulo 3 · Autogestão e Inteligência Emocional",
+          description: "Desenvolva autorregulação e transforme reflexão em plano de ação.",
+          cover: prefix + "modulo-03.png",
+          lessons: [
+            lesson("lideranca-autogestao-inteligencia-emocional", "3.1 Liderança Autogestão – Inteligência emocional", "03", "01"),
+            lesson("autorregulacao", "3.2 Autorregulação", "03", "02"),
+            lesson("meu-plano-de-autogestao", "3.4 Meu plano de Autogestão", "03", "03"),
+          ],
+        },
+      ],
+    }],
+    ranking: [], forums: [], posts: [], notifications: [],
+  };
+})();

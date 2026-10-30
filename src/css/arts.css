@@ -1,0 +1,102 @@
+/* =============================================================
+ * ARTES — IMUTÁVEL (certificado e capas geradas por src/js/arts.js).
+ * Medidas em px fixos: as peças são exportadas em tamanho exato.
+ * Cores: só as variáveis do cliente (--brand*, --navbar-*) e neutros.
+ * ============================================================= */
+
+.art {
+  position: relative;
+  overflow: hidden;
+  flex: none;
+  font-family: var(--font-sans);
+  color: #171717;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+.art p { margin: 0; }
+.art * { box-sizing: border-box; }
+
+/* fundo escuro de marca = cores da barra lateral do cliente */
+.art-dark {
+  color: #fff;
+  background: linear-gradient(135deg, hsl(var(--navbar-primary)) 0%, hsl(var(--navbar-secondary)) 100%);
+}
+.art-glow { position: absolute; border-radius: 9999px; background: radial-gradient(circle, hsl(var(--brand) / .55) 0%, hsl(var(--brand) / 0) 70%); }
+.art-ring { position: absolute; border-radius: 9999px; border: 2px solid hsl(var(--brand) / .55); }
+.art-accent { position: absolute; width: 40px; height: 5px; border-radius: 9999px; background: hsl(var(--brand)); }
+.art-logo { position: absolute; display: block; max-width: none; }
+.art-title { font-weight: 700; line-height: 1.08; letter-spacing: -.02em; color: #fff; }
+.art-sub { margin-top: 8px; font-size: 14px; line-height: 1.35; color: #ffffffb3; }
+.art-eyebrow { position: absolute; font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: hsl(var(--brand-light)); }
+
+.art-cover-text { position: absolute; left: 24px; right: 24px; bottom: 22px; }
+.art-cover-text .art-title { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.art-module-num { position: absolute; right: 18px; top: 6px; font-size: 150px; font-weight: 800; line-height: 1; letter-spacing: -.05em; color: transparent; -webkit-text-stroke: 2px #ffffff26; }
+.art-module-text { position: absolute; left: 24px; right: 24px; bottom: 28px; }
+.art-thumb-num { position: absolute; left: 10px; bottom: 6px; font-size: 26px; font-weight: 800; line-height: 1; letter-spacing: -.04em; color: #fff; }
+.art-thumb-play { position: absolute; right: 9px; top: 9px; color: hsl(var(--brand-light)); }
+.art-banner-text { position: absolute; left: 96px; top: 50%; width: 760px; transform: translateY(-50%); }
+.art-cta {
+  display: inline-block; margin-top: 28px; padding: 14px 28px; border-radius: 6px;
+  background: hsl(var(--brand)); color: hsl(var(--brand-invert)); font-size: 17px; font-weight: 700;
+}
+
+/* ---------- certificado (1056 x 816) ---------- */
+.art-cert > * { position: absolute; }
+.cert-band { left: 0; top: 0; bottom: 0; width: 20px; background: linear-gradient(180deg, hsl(var(--navbar-primary)), hsl(var(--navbar-secondary))); }
+.cert-corner { right: 0; top: 0; width: 170px; height: 170px; background: hsl(var(--brand)); clip-path: polygon(100% 0, 0 0, 100% 100%); opacity: .9; }
+.cert-frame { left: 52px; top: 36px; right: 36px; bottom: 36px; border: 1px solid hsl(var(--brand) / .35); border-radius: 4px; }
+
+.cert-logo { left: 0; right: 0; top: 76px; margin: 0 auto; max-width: 260px; max-height: 52px; object-fit: contain; }
+.cert-eyebrow { left: 0; right: 0; top: 160px; text-align: center; font-size: 15px; font-weight: 700; letter-spacing: .35em; text-transform: uppercase; color: hsl(var(--brand-dark)); }
+.cert-title { left: 0; right: 0; top: 184px; text-align: center; font-size: 46px; line-height: 1.1; font-weight: 700; letter-spacing: -.02em; color: hsl(var(--navbar-primary)); }
+.cert-lead { left: 0; right: 0; top: 266px; text-align: center; font-size: 17px; color: #525252; }
+.cert-name { display: flex; align-items: center; justify-content: center; text-align: center; font-size: 42px; font-weight: 600; letter-spacing: -.01em; color: hsl(var(--navbar-primary)); white-space: nowrap; overflow: hidden; }
+.cert-name-line { left: 228px; top: 378px; width: 600px; height: 1px; background: hsl(var(--brand) / .6); }
+.cert-body { left: 148px; top: 402px; width: 760px; text-align: center; font-size: 18px; line-height: 28px; color: #404040; }
+.cert-body strong { color: #171717; font-weight: 700; }
+.cert-label { top: 518px; text-align: center; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #737373; }
+.cert-slot-line { top: 568px; height: 1px; background: #d4d4d4; }
+.cert-slot-value { display: flex; align-items: center; justify-content: center; font-size: 15px; color: #262626; }
+
+.cert-sign { left: 378px; top: 600px; width: 300px; text-align: center; }
+.cert-sign img { display: block; height: 58px; max-width: 240px; margin: 0 auto 4px; object-fit: contain; }
+.cert-sign-line { position: static; height: 1px; background: #a3a3a3; margin-top: 62px; }
+.cert-sign img + .cert-sign-line { margin-top: 0; }
+.cert-sign-name { margin-top: 10px; font-size: 16px; font-weight: 700; color: #171717; }
+.cert-sign-role { margin-top: 2px; font-size: 13px; color: #737373; }
+
+.cert-qr-label { left: 836px; top: 712px; width: 144px; text-align: center; font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #737373; }
+.cert-footer { left: 0; right: 0; top: 752px; text-align: center; font-size: 11px; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: #a3a3a3; }
+
+/* verso */
+.cert-back-title { left: 96px; right: 96px; top: 110px; text-align: center; font-size: 30px; font-weight: 700; letter-spacing: -.02em; color: hsl(var(--navbar-primary)); }
+.cert-back-grid { left: 100px; right: 84px; top: 186px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px 40px; }
+.cert-back-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; gap: 18px 28px; }
+.cert-back-mod-title { display: flex; gap: 10px; font-size: 14px; font-weight: 700; color: #171717; }
+.cert-back-mod-title span { color: hsl(var(--brand-dark)); }
+.cert-back-mod ul { margin: 6px 0 0 30px; padding: 0; list-style: none; }
+.cert-back-mod li { font-size: 12px; line-height: 18px; color: #525252; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cert-back-mod li.more { color: #a3a3a3; }
+.cert-back-hours { left: 0; right: 0; top: 700px; text-align: center; font-size: 14px; color: #525252; }
+.cert-back-logo { left: 0; right: 0; top: 730px; margin: 0 auto; max-height: 30px; max-width: 160px; object-fit: contain; }
+
+/* guias dos campos dinâmicos (só na pré-visualização do kit) */
+.art-guide {
+  position: absolute; display: flex; align-items: center; justify-content: center;
+  border: 2px dashed hsl(var(--brand)); border-radius: 4px; background: hsl(var(--brand) / .08);
+}
+.art-guide span { font-size: 11px; font-weight: 700; letter-spacing: .08em; color: hsl(var(--brand-dark)); text-align: center; padding: 0 4px; }
+
+/* ---------- certificado dentro da plataforma (escala para caber) ---------- */
+.cert-viewer { width: 100%; max-width: 1056px; margin: 1.5rem auto 0; }
+.cert-viewer__scale { position: relative; width: 100%; aspect-ratio: 1056 / 816; overflow: hidden; border-radius: var(--radius-lg); box-shadow: 0 10px 15px -3px #0000001a, 0 0 0 1px #0000000d; }
+.cert-viewer__scale > .art { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.cert-viewer__scale + .cert-viewer__scale { margin-top: 1.5rem; }
+
+@media print {
+  @page { size: 11in 8.5in; margin: 0; }
+  .cert-viewer { max-width: none; margin: 0; }
+  .cert-viewer__scale { width: 1056px; border-radius: 0; box-shadow: none; break-after: page; }
+  .cert-viewer__scale > .art { transform: none !important; }
+}
